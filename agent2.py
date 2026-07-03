@@ -13,7 +13,7 @@ from langchain.agents import create_agent
 from langchain.agents.middleware import wrap_tool_call
 
 # =========================
-# 🌦️ Weather Tool
+#  Weather Tool
 # =========================
 
 @tool
@@ -36,7 +36,7 @@ def get_weather(city: str) -> str:
 
 
 # =========================
-# 📰 News Tool (Tavily)
+# News Tool (Tavily)
 # =========================
 
 tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
@@ -69,7 +69,7 @@ def get_news(city: str) -> str:
     
     return f"Latest news in {city}:\n\n" + "\n\n".join(news_list)
 # =========================
-# 🧠 LLM Setup
+#  LLM Setup
 # =========================
 
 llm = ChatMistralAI(model="mistral-small-2506")
